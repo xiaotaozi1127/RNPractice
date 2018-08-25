@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
+import PresentationalComponent from './PresentationalComponent.js';
 
 class Home extends Component {
 	state = {
-		mystate: "my state"
+		myState: "my state"
 	}
+	updateState = () => {this.setState({myState: 'updated state'})}
 	render() {
 		return (
 			<View>
-				<Text>
-					{this.state.mystate}
-				</Text>
+				<PresentationalComponent myState = {this.state.myState} updateState = 
+               {this.updateState}/>
 			</View>
 			);
 	}
