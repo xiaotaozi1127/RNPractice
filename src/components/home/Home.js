@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Dimensions} from 'react-native';
+import {Text, View, StyleSheet, Dimensions, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback} from 'react-native';
 import PresentationalComponent from './PresentationalComponent.js';
 import List from './List.js';
 import Inputs from './Inputs.js';
@@ -15,10 +15,15 @@ class Home extends Component {
 		myState: "my state"
 	}
 	updateState = () => {this.setState({myState: 'updated state'})}
+	onPress = () => alert('click button');
 	render() {
 		return (
 			<View style= {styles.container}>
-				<HttpExample />
+				<TouchableOpacity onPress = {this.onPress}>
+					<Text style = {styles.text}>
+		               Button
+		            </Text>
+				</TouchableOpacity>
 			</View>
 			);
 	}
@@ -31,7 +36,6 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: 'grey',
 	},
 	redbox: {
 		backgroundColor: 'red',
