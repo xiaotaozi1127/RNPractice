@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, Dimensions} from 'react-native';
 import PresentationalComponent from './PresentationalComponent.js';
 import List from './List.js';
+import Inputs from './Inputs.js';
+
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 
 class Home extends Component {
 	state = {
@@ -11,10 +15,7 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
-				<List />
-				<View style = {styles.redbox}/>
-				<PresentationalComponent myState = {this.state.myState} updateState = 
-               {this.updateState}/>
+				<Inputs />
 			</View>
 			);
 	}
@@ -22,12 +23,12 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
 	container: {
+		flex: 1,
+		width: width,
 		flexDirection: 'column',
-		justifyContent: 'space-between',
-		alignItems: 'flex-end',
+		justifyContent: 'center',
+		alignItems: 'center',
 		backgroundColor: 'grey',
-		height: 600,
-		width: 300
 	},
 	redbox: {
 		backgroundColor: 'red',
