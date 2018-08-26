@@ -6,6 +6,7 @@ import Inputs from './Inputs.js';
 import ScrollViewExample from './ScrollViewExample';
 import ImagesExample from './ImagesExample';
 import HttpExample from './HttpExample';
+import Animations from './Animations'
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
@@ -19,11 +20,7 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
-				<TouchableOpacity onPress = {this.onPress}>
-					<Text style = {styles.text}>
-		               Button
-		            </Text>
-				</TouchableOpacity>
+				<Animations />
 			</View>
 			);
 	}
