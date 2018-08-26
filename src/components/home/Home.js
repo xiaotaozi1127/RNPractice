@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import PresentationalComponent from './PresentationalComponent.js';
+import List from './List.js';
 
 class Home extends Component {
 	state = {
@@ -10,9 +11,8 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
+				<List />
 				<View style = {styles.redbox}/>
-				<View style = {styles.bluebox}/>
-				<View style = {styles.blackbox}/>
 				<PresentationalComponent myState = {this.state.myState} updateState = 
                {this.updateState}/>
 			</View>
