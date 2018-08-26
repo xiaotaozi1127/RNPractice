@@ -3,6 +3,7 @@ import {Text, View, StyleSheet, Dimensions} from 'react-native';
 import PresentationalComponent from './PresentationalComponent.js';
 import List from './List.js';
 import Inputs from './Inputs.js';
+import ScrollViewExample from './ScrollViewExample';
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
@@ -15,7 +16,7 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
-				<Inputs />
+				<ScrollViewExample />
 			</View>
 			);
 	}
