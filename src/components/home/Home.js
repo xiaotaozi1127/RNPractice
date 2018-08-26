@@ -5,6 +5,7 @@ import List from './List.js';
 import Inputs from './Inputs.js';
 import ScrollViewExample from './ScrollViewExample';
 import ImagesExample from './ImagesExample';
+import HttpExample from './HttpExample';
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
@@ -17,7 +18,7 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
-				<ImagesExample />
+				<HttpExample />
 			</View>
 			);
 	}
