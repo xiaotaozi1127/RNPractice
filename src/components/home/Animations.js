@@ -16,7 +16,7 @@ class Animations extends Component {
 
    animatedBox = () => {
       Animated.timing(this.animatedWidth, {
-         toValue: 200,
+         toValue: 300,
          duration: 1000
       }).start()
       Animated.timing(this.animatedHeight, {
