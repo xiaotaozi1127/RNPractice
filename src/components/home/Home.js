@@ -1,24 +1,35 @@
-import React, {Component} from 'react';
-import {Text, View, StyleSheet, Dimensions, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback} from 'react-native';
-import PresentationalComponent from './PresentationalComponent.js';
-import List from './List.js';
-import Inputs from './Inputs.js';
-import ScrollViewExample from './ScrollViewExample';
-import ImagesExample from './ImagesExample';
-import HttpExample from './HttpExample';
-import Animations from './Animations'
-import WebViewExample from './WebViewExample'
-import ModalExample from './ModalExample'
-import ActivityIndicatorExample from './ActivityIndicatorExample'
-import PickerExample from './PickerExample'
+import React, { Component } from 'react'
+import {
+   View
+} 
+from 'react-native'
+import SwitchExample from './SwitchExample'
 
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full height
-
-const Home = () => {
-	return (
-			<PickerExample />
-		)
+export default class HomeContainer extends Component {
+   constructor() {
+      super();
+      this.state = {
+         switch1Value: false,
+         switch2Value: false,
+      }
+   }
+   toggleSwitch1 = (value) => {
+      this.setState({switch1Value: value})
+      console.log('Switch 1 is: ' + value)
+   }
+   toggleSwitch2 = (value) => {
+      this.setState({switch2Value: value})
+      console.log('Switch 2 is: ' + value)
+   }
+   render() {
+      return (
+         <View>
+            <SwitchExample
+               toggleSwitch1 = {this.toggleSwitch1}
+               toggleSwitch2 = {this.toggleSwitch2}
+               switch1Value = {this.state.switch1Value}
+               switch2Value = {this.state.switch2Value}/>
+         </View>
+      );
+   }
 }
-
-export default Home;
