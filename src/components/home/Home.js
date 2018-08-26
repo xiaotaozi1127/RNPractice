@@ -10,49 +10,15 @@ import Animations from './Animations'
 import WebViewExample from './WebViewExample'
 import ModalExample from './ModalExample'
 import ActivityIndicatorExample from './ActivityIndicatorExample'
+import PickerExample from './PickerExample'
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
 
-class Home extends Component {
-	state = {
-		myState: "my state"
-	}
-	updateState = () => {this.setState({myState: 'updated state'})}
-	onPress = () => alert('click button');
-	render() {
-		return (
-			<View style= {styles.container}>
-				<ActivityIndicatorExample />
-			</View>
-			);
-	}
+const Home = () => {
+	return (
+			<PickerExample />
+		)
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		width: width,
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	redbox: {
-		backgroundColor: 'red',
-		width: 100,
-		height: 100
-	},
-	bluebox: {
-		backgroundColor: 'blue',
-		width: 100,
-		height: 100
-	},
-	blackbox: {
-		backgroundColor: 'black',
-		width: 100,
-		height: 100
-	}
-
-})
 
 export default Home;
