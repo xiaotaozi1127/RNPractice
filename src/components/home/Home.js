@@ -9,6 +9,7 @@ import HttpExample from './HttpExample';
 import Animations from './Animations'
 import WebViewExample from './WebViewExample'
 import ModalExample from './ModalExample'
+import ActivityIndicatorExample from './ActivityIndicatorExample'
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
@@ -22,7 +23,7 @@ class Home extends Component {
 	render() {
 		return (
 			<View style= {styles.container}>
-				<ModalExample />
+				<ActivityIndicatorExample />
 			</View>
 			);
 	}
