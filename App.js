@@ -8,12 +8,14 @@
 
 import React, {Component} from 'react';
 import { View, StyleSheet } from 'react-native';
-import Routes from './src/components/routes/Routes.js';
+import Home from './src/components/home/Home.js';
 
 export default class App extends Component {
   render() {
     return (
-      <Routes />
+      <View style={styles.container}>
+        <Home />
+      </View>
     );
   }
 }
