@@ -40,6 +40,8 @@ export default class HorizonFlatList extends Component {
 						color: '#663399',
 						text: 'screen3'
 					}]}
+					horizontal={true}
+					pagingEnabled={true}
   				renderItem={this._renderItem}
   			/>
 			)
